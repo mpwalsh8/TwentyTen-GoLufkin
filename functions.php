@@ -120,10 +120,10 @@ function twentyten_admin_header_style() {
 }
 
 /**
- * acme_wp_head()
+ * gl_wp_head()
  *
  */
-function acme_wp_head() {
+function gl_wp_head() {
     printf('<meta name="viewport" content="width=device-width" />%s', PHP_EOL) ;
 	printf('<link rel="shortcut icon" href="%s/images/favicon.ico" >%s', get_stylesheet_directory_uri(), PHP_EOL) ;
 
@@ -141,26 +141,26 @@ function acme_wp_head() {
     }
      */
 
-    //  TwentyTen-ACC needs jQuery!
+    //  TwentyTen-GoLufkin needs jQuery!
     wp_enqueue_script('jquery') ;
     
     //  Load Chosen jQuery plugin to handle dropdown menus on mobile devices
 
-    wp_register_script( 'acme-chosen',
+    wp_register_script( 'gl-chosen',
         sprintf('%s/js/chosen/chosen/chosen.jquery.min.js', get_stylesheet_directory_uri()), array('jquery'));
         //array('jquery'), '0.9.11', true );
 
-    wp_enqueue_script('acme-chosen') ;
+    wp_enqueue_script('gl-chosen') ;
         //sprintf('%s/js/chosen/chosen/chosen.jquery.min.js', get_stylesheet_directory_uri())) ;
 
-    wp_enqueue_style('acme-chosen-css',
+    wp_enqueue_style('gl-chosen-css',
         sprintf('%s/js/chosen/chosen/chosen.css', get_stylesheet_directory_uri())) ;
         //plugins_url(plugin_basename(dirname(__FILE__) . '/js/chosen/chosen/chosen.css'))) ;
 }
-add_action('wp_head', 'acme_wp_head');
+add_action('wp_head', 'gl_wp_head');
 
 /**
- * twentyten_acme_wp_footer()
+ * twentyten_gl_wp_footer()
  *
  * By default TwentyTen doesn't have an easy way to add the mobile menu
  * block we want nor is there any obvious hooks to use.  Instead of copy
@@ -172,7 +172,7 @@ add_action('wp_head', 'acme_wp_head');
  * then make it visible.
  *
  */
-function twentyten_acme_wp_footer()
+function twentyten_gl_wp_footer()
 {
 ?>
 <div id="mobile-menus"><?php //dropdown_menu( array(
@@ -225,12 +225,12 @@ function twentyten_acme_wp_footer()
 <?php
 }
 
-add_action('wp_footer', 'twentyten_acme_wp_footer');
+add_action('wp_footer', 'twentyten_gl_wp_footer');
 
 //  Load AdRotate customizations
-include_once('acme-adrotate.php');
+include_once('gl-adrotate.php');
 
 //  Load WooCommerce customizations
-include_once('acme-woocommerce.php');
+include_once('gl-woocommerce.php');
 
 ?>
