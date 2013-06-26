@@ -1,6 +1,4 @@
-twentyten-acme
-==============
+TwentyTen-GoLufkin
+==================
 
-TwentyTen ACME WordPress Theme - a child theme with options! 
-
-This will be the base theme for a series of TwentyTen child themes that will share common functionality.
+WordPress TwentyTen child theme for the Lufkin Middle School Athletics Booster Club web site. 
