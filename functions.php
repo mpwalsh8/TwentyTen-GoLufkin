@@ -141,7 +141,11 @@ function gl_wp_head() {
     }
      */
 
+<<<<<<< HEAD
     //  TwentyTen-GoLufkin needs jQuery!
+=======
+    //  TwentyTen-ACME needs jQuery!
+>>>>>>> c3e4fe2e832daa9b50618a2f8dfc800e040beb12
     wp_enqueue_script('jquery') ;
     
     //  Load Chosen jQuery plugin to handle dropdown menus on mobile devices
