@@ -1,5 +1,9 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
+
+define('GOLUFKIN_MAJOR_RELEASE', '0');
+define('GOLUFKIN_MINOR_RELEASE', '1');
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -53,7 +57,7 @@ function twentyten_setup() {
 	$custom_header_support = array(
 		// The default image to use.
 		// The %s is a placeholder for the theme template directory URI.
-		'default-image' => get_bloginfo('stylesheet_directory') . '/images/GoLufkin_Banner_940x198.png',
+		'default-image' => get_bloginfo('stylesheet_directory') . '/images/TwentyTen-GOLUFKIN_Logo_v1.png',
 		// The height and width of our custom header.
 		'width' => apply_filters( 'twentyten_header_image_width', 940 ),
 		'height' => apply_filters( 'twentyten_header_image_height', 198 ),
@@ -88,10 +92,10 @@ function twentyten_setup() {
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
   		'std' => array(
-			'url' => get_bloginfo('stylesheet_directory') . '/images/GoLufkin_Banner_940x198.png',
-			'thumbnail_url' => get_bloginfo('stylesheet_directory') . '/images/GoLufkin_Banner_300x63.png',
+			'url' => get_bloginfo('stylesheet_directory') . '/images/TwentyTen-GOLUFKIN_Logo_v1.png',
+			'thumbnail_url' => get_bloginfo('stylesheet_directory') . '/images/TwentyTen-GOLUFKIN_Logo_v1-thumbnail.png',
 			/* translators: header image description */
-			'description' => __( 'Lufkin Athletics Booster Club', 'twentyten' )
+			'description' => __( 'TwentyTen-GOLUFKIN', 'twentyten' )
 		)
 	) );
 }
@@ -226,6 +230,22 @@ function twentyten_gl_wp_footer()
 }
 
 add_action('wp_footer', 'twentyten_gl_wp_footer');
+
+/**
+ * Action to add theme credits
+ *
+ */
+function gl_credits()
+{
+    $txt = sprintf('<div id="golufkin-footer">Copyright &copy; 2012-%s, %s - All rights reserved.<br>',
+        date('Y'), get_bloginfo('name')) ;
+    $txt .= '<span id="golufkin-link">Lufkin Road Middle School | 1002 Lufkin Road, Apex NC 27539 | phone 919.387.4465</span><br/>' ;
+
+    $txt .= sprintf('The TwentyTen-GoLufkin theme (v%s.%s) is a child theme of the <a href="http://theme.wordpress.com/themes/twentyten/">Twenty Ten</a> theme.</div>', GOLUFKIN_MAJOR_RELEASE, GOLUFKIN_MINOR_RELEASE) ;
+
+    echo $txt ;
+}
+add_action('twentyten_credits', 'gl_credits') ;
 
 //  Load AdRotate customizations
 include_once('gl-adrotate.php');

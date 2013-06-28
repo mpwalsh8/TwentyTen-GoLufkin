@@ -1,0 +1,35 @@
+/* vim: set expandtab tabstop=4 shiftwidth=4: */
+
+.acc-adblock {
+    padding-bottom: 3px;
+}
+
+#acc-adblock-1 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+}
+    
+/* =Responsive Structure
+----------------------------------------------- */
+
+@media (max-width: 1023px) {
+    .acc-adblock img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 450px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}
+
+/* =Print
+----------------------------------------------- */
+
+@media print {
+}

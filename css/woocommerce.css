@@ -1,0 +1,39 @@
+/* vim: set expandtab tabstop=4 shiftwidth=4: */
+    
+/**  Woo Commerce styling **/
+.woocommerce div.product div.summary {
+    clear: none;
+}
+
+.woocommerce-info {
+    border-top: 3px solid #003300 !important;
+}
+
+.woocommerce-info:before {
+    background-color: #003300 !important;
+}
+
+div.required-product-addon h3.addon-name {
+    display: none;
+}
+
+/* =Responsive Structure
+----------------------------------------------- */
+
+@media (max-width: 1023px) {
+}
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 450px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}
+
+/* =Print
+----------------------------------------------- */
+
+@media print {
+}

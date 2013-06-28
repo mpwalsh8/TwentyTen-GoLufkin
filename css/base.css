@@ -1,0 +1,209 @@
+/* vim: set expandtab tabstop=4 shiftwidth=4: */
+
+html {
+    background: #efefef;
+}
+
+body {
+    /*border: 1px solid black;*/
+    font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #000000;
+    background: #f1f1f1;
+    padding: 0 1em;
+}
+
+a:link, a:visited {
+}
+
+a:active, a:hover {
+}
+
+.page-title a:link,
+.page-title a:visited {
+}
+.page-title a:active,
+.page-title a:hover {
+}
+
+.entry-title a:active,
+.entry-title a:hover {
+}
+
+.page-link a:active,
+.page-link a:hover {
+}
+
+.entry-meta a,
+.entry-utility a {
+}
+.entry-meta a:hover,
+.entry-utility a:hover {
+}
+
+.navigation a:link,
+.navigation a:visited {
+}
+.navigation a:active,
+.navigation a:hover {
+}
+
+.comment-meta a:link,
+.comment-meta a:visited {
+}
+.comment-meta a:active,
+.comment-meta a:hover {
+}
+
+.reply a,
+a.comment-edit-link {
+}
+.reply a:hover,
+a.comment-edit-link:hover {
+}
+
+#respond .required {
+}
+
+.widget_rss a.rsswidget:hover {
+}
+
+#container {
+}
+
+#header {
+    padding: 0px;
+}
+
+#content {
+    padding-right: 10px;
+    border-right: 1px solid #efefef;
+}
+
+#site-generator {
+    width: auto;
+    text-align: right;
+    font-size: 0.75em;
+}
+
+#site-generator a {
+    padding-left: 0px;
+    background-image: none;
+}
+
+.widget-title {
+}
+
+.entry-title {
+}
+
+.entry-title a:active, .entry-title a:hover {
+}
+
+#site-title {
+}
+
+#site-title a {
+}
+
+#site-description {
+    width: auto;
+    float: right;
+    text-align: right;
+}
+
+#branding {
+}
+
+#branding img {
+}
+
+#masthead {
+}
+
+#wrapper {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 0 20px;
+    border: 1px solid #464646;                     /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    margin: 20px auto;
+   	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+#header {
+}
+
+.skip-link {
+    display: none;
+}
+
+/* =Responsive Structure
+----------------------------------------------- */
+
+@media (max-width: 1023px) {
+    #site-title {
+        font-size: 24px;
+    }
+
+    #access .menu-header, div.menu, #colophon, #branding, #main, #wrapper  {
+        width: auto;
+    }
+
+    #branding img {
+        height: auto;
+        width: 100%;
+    }
+
+    #access {
+        width: 100%;
+        overflow: hidden;
+        display: none;
+    }
+
+    #content, #container {
+        margin: 0;
+    }
+
+    #primary, #secondary {
+        float: none;
+        width: 100%;
+    }
+
+    #footer-widget-area .widget-area {
+        width: 100%;
+    }
+
+    #wpadminbar {
+        display: none;
+    }
+
+    #site-title, #site-description, #site-info, #site-generator {
+        width: auto;
+        margin: 3px auto;
+        float: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 450px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    body {
+        padding: 0 0.6em 0 0.4em;
+    }
+}
+
+/* =Print
+----------------------------------------------- */
+
+@media print {
+}

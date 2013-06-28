@@ -1,0 +1,105 @@
+/* vim: set expandtab tabstop=4 shiftwidth=4: */
+
+a:link, a:visited {
+    color: #d5002c;
+}
+
+a:active, a:hover {
+    color: #464646;
+}
+
+.page-title a:link,
+.page-title a:visited {
+	color: #d5002c;
+}
+.page-title a:active,
+.page-title a:hover {
+	color: #464646;
+}
+
+.entry-title a:active,
+.entry-title a:hover {
+	color: #464646;
+}
+
+.page-link a:active,
+.page-link a:hover {
+	color: #464646;
+}
+
+.entry-meta a,
+.entry-utility a {
+	color: #d5002c;
+}
+.entry-meta a:hover,
+.entry-utility a:hover {
+	color: #464646;
+}
+
+.navigation a:link,
+.navigation a:visited {
+	color: #d5002c;
+}
+.navigation a:active,
+.navigation a:hover {
+	color: #464646;
+}
+
+.comment-meta a:link,
+.comment-meta a:visited {
+	color: #d5002c;
+}
+.comment-meta a:active,
+.comment-meta a:hover {
+	color: #464646;
+}
+
+.reply a,
+a.comment-edit-link {
+	color: #d5002c;
+}
+.reply a:hover,
+a.comment-edit-link:hover {
+	color: #464646;
+}
+
+#respond .required {
+	color: #464646;
+}
+
+.widget_rss a.rsswidget:hover {
+	color: #464646;
+}
+
+.widget-title {
+    border-bottom: 3px solid #464646;
+}
+
+.entry-title {
+    border-bottom: 4px solid #464646;
+}
+
+.entry-title a:active, .entry-title a:hover {
+    color: #464646;
+}
+
+/* =Responsive Structure
+----------------------------------------------- */
+
+@media (max-width: 1023px) {
+}
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 450px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}
+
+/* =Print
+----------------------------------------------- */
+
+@media print {
+}

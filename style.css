@@ -1,6 +1,6 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
 /*
-Theme Name:     TwentyTen-Acme
+Theme Name:     TwentyTen-ACME
 Theme URI:      http: //michaelwalsh.org/
 Description:    ACME (generic) child theme for the Twenty Ten theme 
 Author:         Mike Walsh
@@ -9,113 +9,14 @@ Template:       twentyten
 Version:        0.1.0
 */
 
+/** Load TwentyTen CSS as a baseline  **/
+
 @import url("../twentyten/style.css");
 
-html {
-    background: #efefef;
-}
+/**  Load Child theme and plugin CSS  **/
 
-body {
-    margin: 30px 50px;
-    border: 1px solid black;
-    font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
-    color: #000000;
-    background: #ffffff;
-}
-
-#container {
-    /*min-height: 500px;*/
-	/*background-image: url(images/OnYourMarksLtGreyLeft_400x400.png);*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: right bottom;*/
-}
-
-#header {
-    padding: 0px;
-}
-
-#content {
-    padding-right: 10px;
-    border-right: 1px solid #efefef;
-}
-
-.widget-title {
-    border-bottom: 3px solid #0580ff;
-}
-
-.entry-title {
-    border-bottom: 4px solid #0580ff;
-}
-
-.entry-title a:active, .entry-title a:hover {
-    color: #0580ff;
-}
-
-#site-title {
-    /*
-    position: relative;
-    top: 70px;
-    left: 250px;
-    z-index: 10;
-    font-size: 3.0em;
-    width: 675px;
-    line-height: 0px;
-    margin-bottom: 20px;
-    */
-    /*float: left;*/
-    /*height: auto;*/
-    /*display: none;*/
-}
-
-#site-title a {
-    color: #ffffff;
-}
-
-#site-description {
-    /*
-    position: relative;
-    top: 70px;
-    left: 250px;
-    z-index: 10;
-    color: #ffffff;
-    width: 675px;
-    font-size: 1.8em;
-    margin-top: 0px;
-    */
-    /*float: left;*/
-    /*height: auto;*/
-    /*display: none;*/
-}
-
-#branding {
-    /*height: 208px;*/
-    border: 0px solid orange;
-}
-
-#branding img {
-    /*position: relative;*/
-    /*top: -100px;*/
-    /*left: 0px;*/
-    /*float: none;*/
-}
-
-#masthead {
-	/*background-image: url(images/OnYourMarksLtGreyLeft_400x400.png);*/
-    /*border: 2px solid green;*/
-    /*height: 275px;*/
-}
-
-#wrapper {
-    /*border: 2px solid blue;*/
-    /*height: 300px;*/
-}
-
-#header {
-    border: 2px solid red;
-    /*height: 300px;*/
-}
-
-.skip-link {
-    display: none;
-}
+@import url("css/base.css");
+@import url("css/menus.css");
+@import url("css/adblock.css");
+@import url("css/woocommerce.css");
+@import url("css/color.css");
