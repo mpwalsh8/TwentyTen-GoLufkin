@@ -57,7 +57,7 @@ function twentyten_setup() {
 	$custom_header_support = array(
 		// The default image to use.
 		// The %s is a placeholder for the theme template directory URI.
-		'default-image' => get_bloginfo('stylesheet_directory') . '/images/TwentyTen-GOLUFKIN_Logo_v1.png',
+		'default-image' => get_bloginfo('stylesheet_directory') . '/images/GoLufkin_Banner_v1.png',
 		// The height and width of our custom header.
 		'width' => apply_filters( 'twentyten_header_image_width', 940 ),
 		'height' => apply_filters( 'twentyten_header_image_height', 198 ),
@@ -92,10 +92,10 @@ function twentyten_setup() {
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
   		'std' => array(
-			'url' => get_bloginfo('stylesheet_directory') . '/images/TwentyTen-GOLUFKIN_Logo_v1.png',
-			'thumbnail_url' => get_bloginfo('stylesheet_directory') . '/images/TwentyTen-GOLUFKIN_Logo_v1-thumbnail.png',
+			'url' => get_bloginfo('stylesheet_directory') . '/images/GoLufkin_Banner_v1.png',
+			'thumbnail_url' => get_bloginfo('stylesheet_directory') . '/images/GoLufkin_Banner_v1-thumbnail.png',
 			/* translators: header image description */
-			'description' => __( 'TwentyTen-GOLUFKIN', 'twentyten' )
+			'description' => __( 'TwentyTen-GoLufkin', 'twentyten' )
 		)
 	) );
 }
