@@ -131,35 +131,18 @@ function gl_wp_head() {
     printf('<meta name="viewport" content="width=device-width" />%s', PHP_EOL) ;
 	printf('<link rel="shortcut icon" href="%s/images/favicon.ico" >%s', get_stylesheet_directory_uri(), PHP_EOL) ;
 
-    /**
-     * Add support for mobile menus by incorporating
-     * the Dropdown-Menus plugin as part of the theme.
-     *
-     * @see http://wordpress.org/plugins/dropdown-menus/
-     */
-
-    /*
-    if (!is_admin()) {
-        if ( ! function_exists( 'dropdown_menu' ) )
-            include( 'dropdown-menus/dropdown-menus.php' );
-    }
-     */
-
     //  TwentyTen-GoLufkin needs jQuery!
     wp_enqueue_script('jquery') ;
     
     //  Load Chosen jQuery plugin to handle dropdown menus on mobile devices
 
     wp_register_script( 'gl-chosen',
-        sprintf('%s/js/chosen/chosen/chosen.jquery.min.js', get_stylesheet_directory_uri()), array('jquery'));
-        //array('jquery'), '0.9.11', true );
+        sprintf('%s/js/chosen/chosen.jquery.min.js', get_stylesheet_directory_uri()), array('jquery'));
 
     wp_enqueue_script('gl-chosen') ;
-        //sprintf('%s/js/chosen/chosen/chosen.jquery.min.js', get_stylesheet_directory_uri())) ;
 
     wp_enqueue_style('gl-chosen-css',
-        sprintf('%s/js/chosen/chosen/chosen.css', get_stylesheet_directory_uri())) ;
-        //plugins_url(plugin_basename(dirname(__FILE__) . '/js/chosen/chosen/chosen.css'))) ;
+        sprintf('%s/js/chosen/chosen.css', get_stylesheet_directory_uri())) ;
 }
 add_action('wp_head', 'gl_wp_head');
 
