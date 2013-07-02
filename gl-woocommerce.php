@@ -24,7 +24,7 @@ add_action('woocommerce_after_order_notes', 'gl_booster_club_custom_checkout_fie
  
 function gl_booster_club_custom_checkout_field( $checkout ) {
  
-    echo '<div id="gl-booster-club-field"><h4>'.__('Please Help the Booster Club ').'</h4><small>Please indicate your areas of interest</small>';
+    echo '<div id="gl-booster-club-field"><h4>'.__('The Booster Club needs your help!').'</h4><small>Please indicate your areas of interest</small>';
  
     woocommerce_form_field( 'gl_bod_interest', array(
         'type'          => 'select',
@@ -38,10 +38,46 @@ function gl_booster_club_custom_checkout_field( $checkout ) {
         ),
         ), $checkout->get_value( 'gl_bod_interest' ));
  
-    woocommerce_form_field( 'gl_volunteer_interest', array(
+    woocommerce_form_field( 'gl_team_parent_manager', array(
         'type'          => 'select',
         'class'         => array('input-select'),
-        'label'         => __('Volunteer Opportunities<i><br/><small>(Powder Puff, Concessions, etc.)</small></i>'),
+        'label'         => __('Team Parent / Manager'),
+        'required'  => true,
+        'options'       => array(
+            'select' => '-- Please indicate interest --',
+            'No' => __('I am not interested at this time.', 'woocommerce'),
+            'Yes' => __('I would like to volunteer, please contact me.', 'woocommerce')
+        ),
+        ), $checkout->get_value( 'gl_volunteer_interest' ));
+ 
+    woocommerce_form_field( 'gl_sports_concessions', array(
+        'type'          => 'select',
+        'class'         => array('input-select'),
+        'label'         => __('Concessions at Home Sporting Events<i><br/><small>(fall or spring)</small></i>'),
+        'required'  => true,
+        'options'       => array(
+            'select' => '-- Please indicate interest --',
+            'No' => __('I am not interested at this time.', 'woocommerce'),
+            'Yes' => __('I would like to volunteer, please contact me.', 'woocommerce')
+        ),
+        ), $checkout->get_value( 'gl_volunteer_interest' ));
+ 
+    woocommerce_form_field( 'gl_dance_concessions', array(
+        'type'          => 'select',
+        'class'         => array('input-select'),
+        'label'         => __('Concessions at Dances<i><br/><small>(3 - Oct, Feb, May)</small></i>'),
+        'required'  => true,
+        'options'       => array(
+            'select' => '-- Please indicate interest --',
+            'No' => __('I am not interested at this time.', 'woocommerce'),
+            'Yes' => __('I would like to volunteer, please contact me.', 'woocommerce')
+        ),
+        ), $checkout->get_value( 'gl_volunteer_interest' ));
+ 
+    woocommerce_form_field( 'gl_end_of_season_reception', array(
+        'type'          => 'select',
+        'class'         => array('input-select'),
+        'label'         => __('End of Season Reception<i><br/><small>(3 - Nov, Feb, May)</small></i>'),
         'required'  => true,
         'options'       => array(
             'select' => '-- Please indicate interest --',
