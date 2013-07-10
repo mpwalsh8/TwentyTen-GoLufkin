@@ -17,6 +17,10 @@ div.required-product-addon h3.addon-name {
     display: none;
 }
 
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    width: 22.5% !important;
+}
+
 /* =Responsive Structure
 ----------------------------------------------- */
 
