@@ -231,9 +231,9 @@ function gl_credits()
 add_action('twentyten_credits', 'gl_credits') ;
 
 //  Load AdRotate customizations
-include_once('gl-adrotate.php');
+require_once(dirname( __FILE__ ) . '/xtra/adrotate.php');
 
 //  Load WooCommerce customizations
-include_once('gl-woocommerce.php');
+require_once(dirname( __FILE__ ) . '/xtra/woocommerce.php');
 
 ?>
