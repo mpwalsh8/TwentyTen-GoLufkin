@@ -2,6 +2,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
 /**
  * TwentyTen-GoLufkin WooCommerce
+ * TwentyTen-ACME WooCommerce
  *
  * $Id$
  *
@@ -9,6 +10,7 @@
  *
  * @author Mike Walsh <mpwalsh8@gmail.com>
  * @package TwentyTen-GoLufkin
+ * @package TwentyTen-ACME
  * @subpackage WooCommerce
  * @version $Revision$
  * @lastmodified $Date$
