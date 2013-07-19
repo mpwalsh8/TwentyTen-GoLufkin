@@ -2,7 +2,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
 
 define('GOLUFKIN_MAJOR_RELEASE', '0');
-define('GOLUFKIN_MINOR_RELEASE', '1');
+define('GOLUFKIN_MINOR_RELEASE', '2');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
