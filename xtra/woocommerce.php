@@ -32,6 +32,66 @@ function gl_loop_shop_columns()
 }
 
 /**
+ * Need a role for WooCommerce Shop Fulfillment
+ *
+ */
+function gl_add_roles()
+{
+    //  List of WooCommerce capabilities needed for fulfillment
+    //  based on email from WC Support.  Some have been set to false
+    //  to prevent certain operations.
+
+    $gl_wc_fulfillment_role = new WP_Role('gl_shop_fulfillment', array(
+        'read' => true,
+        'edit_shop_order' => true,
+        'read_shop_order' => true,
+        'delete_shop_order' => false,
+        'edit_shop_orders' => true,
+        'edit_others_shop_orders' => true,
+        'publish_shop_orders' => false,
+        'read_private_shop_orders' => true,
+        'delete_shop_orders' => false,
+        'delete_private_shop_orders' => false,
+        'delete_published_shop_orders' => false,
+        'delete_others_shop_orders' => false,
+        'edit_private_shop_orders' => true,
+        'edit_published_shop_orders' => true,
+        'manage_shop_order_terms' => false,
+        'edit_shop_order_terms' => false,
+        'delete_shop_order_terms' => false,
+        'assign_shop_order_terms' => false,
+        'view_woocommerce_reports' => true,
+    ));
+
+    //  If the role already exists, test it to see if any capability
+    //  has been changed.  If it has, the role needs to be removed and
+    //  then added again with the new capabilities.
+
+    $role = get_role($gl_wc_fulfillment_role->name);
+
+    //  Sort the data by keys so the array can be compared
+
+    if (is_array($role->capabilities))
+        ksort($role->capabilities) ;
+    ksort($gl_wc_fulfillment_role->capabilities) ;
+
+    //  If what is stored doesn't match what the default is, delete it and add it again
+
+    if ($role->capabilities != $gl_wc_fulfillment_role->capabilities)
+    {
+        $role = remove_role($gl_wc_fulfillment_role->name);
+
+        $role = add_role($gl_wc_fulfillment_role->name,
+            __('Shop Fullfillment', 'woocommerce'), $gl_wc_fulfillment_role->capabilities) ;
+    }
+}
+
+/**
+ * Initiate the action to add roles after the theme is set up
+ **/
+add_action('after_setup_theme','gl_add_roles');
+
+/**
  * Add additonal fields to the checkout process
  **/
 
@@ -187,5 +247,4 @@ function gl_custom_checkout_field_order_meta_keys( $keys ) {
 	$keys[] = 'Student Track';
 	$keys[] = 'Volunteer Interest';
 	return $keys;
-}
-?>
+}?>
