@@ -158,7 +158,6 @@ function gl_booster_club_custom_checkout_field_process() {
 add_action('woocommerce_checkout_update_order_meta', 'gl_booster_club_custom_checkout_field_update_order_meta');
  
 function gl_booster_club_custom_checkout_field_update_order_meta( $order_id ) {
-    error_log(print_r($_POST, true)) ;
     if ($_POST['gl_student_name']) update_post_meta( $order_id, 'Student Name', esc_attr($_POST['gl_student_name']));
     if ($_POST['gl_student_grade']) update_post_meta( $order_id, 'Student Grade', esc_attr($_POST['gl_student_grade']));
     if ($_POST['gl_student_track']) update_post_meta( $order_id, 'Student Track', esc_attr($_POST['gl_student_track']));
@@ -172,9 +171,6 @@ function gl_booster_club_custom_checkout_field_update_order_meta( $order_id ) {
         if ($_POST[$cb['meta']])
             $volunteer_interest[] = $cb['label'] ;
     }
-
-    error_log(print_r($volunteer_interest, true)) ;
-    error_log(print_r(implode(', ', $volunteer_interest), true)) ;
 
     if (!empty($volunteer_interest))
         update_post_meta( $order_id, 'Volunteer Interest', esc_attr(implode(', ', $volunteer_interest)));
